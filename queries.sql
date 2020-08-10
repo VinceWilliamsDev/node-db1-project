@@ -25,21 +25,21 @@ WHERE City IN ('London', 'Madrid') OR Country = 'Brazil';
 -- Add a customer record for "The Shire", the contact name is "Bilbo Baggins" the address is -"1 Hobbit-Hole" in "Bag End", postal code "111" and the country is "Middle Earth"
 
 INSERT INTO Customers (CustomerName, ContactName, Address, City, PostalCode, Country)
-values ('The Shire', 'Bilbo Baggins', '1 Hobbit-Hole', 'Bag End', '111', 'Middle Earth')
+values ('The Shire', 'Bilbo Baggins', '1 Hobbit-Hole', 'Bag End', '111', 'Middle Earth');
 
 -- Update Bilbo Baggins record so that the postal code changes to "11122"
 
 -- SELECT * FROM Customers
 UPDATE Customers
 SET PostalCode = '11122'
-where ContactName = 'Bilbo Baggins'
+where ContactName = 'Bilbo Baggins';
 
 
 -- (Stretch) Find a query to discover how many different cities are stored in the Customers table. Repeats should not be double counted
 
-SELECT COUNT(DISTINCT City) city_count FROM Customers
+SELECT COUNT(DISTINCT City) city_count FROM Customers;
 
 -- (Stretch) Find all suppliers who have names longer than 20 characters. You can use `length(SupplierName)` to get the length of the name
 
 SELECT * FROM Suppliers 
-WHERE LENGTH(SupplierName) > 20
+WHERE LENGTH(SupplierName) > 20;
